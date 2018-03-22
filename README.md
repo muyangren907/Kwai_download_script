@@ -3,7 +3,6 @@
 
 ![](https://raw.githubusercontent.com/muyangren907/Kwai_download_script/master/screenshots/1.png)
 
-
 ## 使用
 
 - ①将json文件获取到该项目同一文件夹下
@@ -12,7 +11,6 @@
 ```
 .\venv\Scripts\python.exe kuaishou.py
 ```
-
 ## 说明
 -	若该主播正在直播，则获取到的第一个json文件第一项为直播信息（即feeds数组中的第一项），需要删去，否则程序运行会报错
 - 获取到的json项目分类有：视频(包含视频和图片电影)，图集(即长图)，图片

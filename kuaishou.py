@@ -20,8 +20,7 @@ def download(vq):
         atlas = videomes[3]
         cover_urls = videomes[4]
         path = videomes[5]
-        # itemnum = videomes[6]
-
+        
         global havedownload
 
         if mv_urls!="None" :
@@ -76,8 +75,6 @@ def download(vq):
                 print("(%d/%d)图片下载完成: %s_%s" % (havedownload,itemnum,photo_id,caption))
                 vq.task_done()
 
-
-
 def main():
     user_name = ""
     user_id = 0
@@ -106,7 +103,6 @@ def main():
 
         user_name = jsonobj['feeds'][0]['user_name']    #get user_name
         user_id = jsonobj['feeds'][0]['user_id']    #get user_id
-        # print(user_name+" "+str(user_id))
 
         if os.path.exists("./"+user_name) == False:
             os.mkdir("./"+user_name)    #mkdir using user_name
@@ -117,7 +113,6 @@ def main():
 
         for item in jsonobj['feeds']:
             itemnum+=1
-            # pprint.pprint(itme)
             caption = item['caption'].replace("\n","").replace("\r","")
             photo_id = item['photo_id']
             if 'main_mv_urls' in item :
@@ -136,13 +131,8 @@ def main():
                     picturenum+=1
                     atlas=["None"]
                     cover_urls = item['cover_urls'][0]['url']
-                    # print(cover_urls)
-            # print(caption)
-            vq.put([caption,photo_id,mv_urls,atlas,cover_urls,"./"+user_name])
 
-            # fp =open("./"+user_name+"/"+caption+".txt","w")
-            # fp.close()
-        # print(user_name + str(user_id))
+            vq.put([caption,photo_id,mv_urls,atlas,cover_urls,"./"+user_name])
 
         jsonfile.close() #close file
     print("itemnum\t"+str(itemnum)+"\nvideonum\t"+str(videonum)+"\natlasnum\t"+str(atlasnum)+"\npicturenum\t"+str(picturenum))
@@ -158,5 +148,5 @@ def main():
         t.setDaemon(True)
         t.start()
     vq.join()
-    # print(str(itemnum)+" "+str(videonum)+" "+str(atlasnum)+" "+str(picturenum))
+    
 main()

@@ -5,16 +5,15 @@
 
 ## 使用
 
-- ①将json文件获取到该项目同一文件夹下
-- ②确保已经安装了python3
-- ③
-Windows下
+### ①将json文件获取到该项目同一文件夹下
+### ②确保已经安装了python3
+### ③执行程序
+- Windows下
 在cmd窗口执行如下指令
 ```
 py -3 kuaishou.py
 ```
-
-Linux下
+- Linux下
 在终端执行如下指令
 ```
 python3 kuaishou.py

@@ -1,11 +1,12 @@
 快手批量下载脚本
 ===========
-V2.0
+# V2.0
 ## 说明
 -	以KwaiJsonDeal.py文件的形式重新编写，移除了自带的下载模块，直接将下载链接解析至IDM中，需自行安装IDM配合该程序使用
 - 文件命名过程中过滤了特殊字符，仅保留汉字，数字，字母等，且对于过长的文件名，仅截取前20个字符
 
-V1.0
+
+# V1.0
 ![](https://raw.githubusercontent.com/muyangren907/Kwai_download_script/master/screenshots/1.png)
 
 ## 使用

@@ -71,8 +71,8 @@ if __name__ == '__main__':
     if 'kwaiId' in feed0:
         user_id = feed0['kwaiId']
     else:
-        user_id = feed0['user_id']
-    user_name = feed0['user_name']
+        user_id = feed0['userId']
+    user_name = feed0['userName']
     Path = 'D:\Project\PycharmProjects\Kwai\%s' % user_id
 
     for feed in feeds:
